@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad de LexiDrop</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+  /* Layout: una sola columna de lectura, cabecera con sello de marca, tarjetas para los puntos clave */
+  :root {
+    --bg: #f4f1ea;
+    --fg: #14213d;
+    --muted: #55607a;
+    --border: #d8d4c6;
+    --card: #ffffff;
+    --accent: #2444c4;
+    --accent-ink: #ffffff;
+    --mark-bg: #ffd93d;
+    --mark-fg: #2a2100;
+    --font-display: "Bricolage Grotesque", -apple-system, "Segoe UI", sans-serif;
+    --font-body: "Atkinson Hyperlegible", -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #141024;
+      --fg: #eaf0fa;
+      --muted: #a7b0c9;
+      --border: #3a2e5c;
+      --card: #1d1733;
+      --accent: #9db8ff;
+      --accent-ink: #14213d;
+      --mark-bg: #ffd93d;
+      --mark-fg: #2a2100;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #141024;
+    --fg: #eaf0fa;
+    --muted: #a7b0c9;
+    --border: #3a2e5c;
+    --card: #1d1733;
+    --accent: #9db8ff;
+    --accent-ink: #14213d;
+    --mark-bg: #ffd93d;
+    --mark-fg: #2a2100;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    padding-inline: 20px;
+    padding-block: 40px 72px;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .mark {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .mark::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 7px;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--mark-bg);
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.6rem;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 2px 0 0;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 40px 0 12px;
+  }
+
+  p, li { font-size: 1rem; }
+
+  p { margin: 0 0 14px; }
+
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 18px 0;
+  }
+  .card p:last-child { margin-bottom: 0; }
+
+  a { color: var(--accent); text-decoration-thickness: 1.5px; }
+
+  .label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  footer {
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  code {
+    background: var(--border);
+    color: var(--fg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="mark">L</div>
+    <div>
+      <h1>Privacidad de LexiDrop</h1>
+      <p class="subtitle">Última actualización: 14 de octubre de 2026</p>
+    </div>
+  </header>
+
+  <p>
+    Esta política explica qué información trata LexiDrop (la "app"), desarrollada
+    por un desarrollador independiente (Daniel Cardona), y cómo se usa. LexiDrop es
+    una app educativa para aprender vocabulario en inglés y español mediante un
+    juego de fichas que caen.
+  </p>
+
+  <div class="card">
+    <span class="label">Resumen rápido</span>
+    <p><strong>LexiDrop no tiene registro ni cuenta de usuario.</strong> No recopila
+    nombre, correo, ni ningún dato personal por sí misma. Tu progreso (racha,
+    monedas, potenciadores, palabras aprendidas) se guarda únicamente en tu
+    dispositivo. El único tratamiento de datos que ocurre es el que realizan
+    <strong>Google AdMob</strong> (anuncios con recompensa opcionales) y
+    <strong>Google Analytics for Firebase</strong> (estadísticas anónimas de uso,
+    como cuántas personas usan la app cada día), además de los informes de
+    errores técnicos.</p>
+  </div>
+
+  <h2>1. Qué datos recoge la app</h2>
+  <p>
+    LexiDrop no incluye registro, inicio de sesión ni cuenta de usuario. La app no
+    recopila tu nombre, correo electrónico, ubicación ni ningún otro dato personal
+    por cuenta propia. Solo incorpora servicios de terceros de analítica anónima
+    de uso (Google Analytics for Firebase) y de informes de errores, descritos
+    en las secciones 3 y 3 bis.
+  </p>
+  <p>
+    Toda la información de tu partida — progreso, racha de días, monedas,
+    potenciadores, estadísticas del diccionario y preferencias (idioma, tema claro
+    u oscuro, sonido) — se procesa y guarda exclusivamente en tu propio dispositivo
+    mediante una base de datos local (Hive). Esos datos <strong>nunca salen del
+    teléfono</strong>: no se envían a ningún servidor, no se sincronizan en la nube
+    y el desarrollador no tiene acceso a ellos.
+  </p>
+
+  <h2>2. Dónde se guarda tu progreso</h2>
+  <p>
+    El progreso del juego y los ajustes de la app se almacenan en dos cajas de
+    datos locales separadas en el almacenamiento interno del dispositivo:
+  </p>
+  <ul>
+    <li>Progreso de juego: racha, monedas, potenciadores y estado de aprendizaje de
+    cada palabra.</li>
+    <li>Preferencias: idioma de la interfaz, tema visual y ajustes de sonido.</li>
+  </ul>
+  <p>
+    Si desinstalas la app, o usas la opción "Reiniciar progreso" dentro de Ajustes,
+    esos datos se borran permanentemente del dispositivo.
+  </p>
+
+  <h2>3. Anuncios con recompensa (Google AdMob)</h2>
+  <p>
+    LexiDrop es gratuita. Para mantenerla así, ofrece anuncios con recompensa
+    <strong>siempre opcionales</strong>: nunca se muestran de forma forzosa ni
+    interrumpen el juego sin que tú lo pidas. Puedes jugar a LexiDrop por completo
+    sin ver ningún anuncio. Los cuatro momentos en los que la app te ofrece ver un
+    anuncio a cambio de una recompensa son:
+  </p>
+  <ul>
+    <li>Cuando la pila de fichas se llena durante una partida, para poder seguir
+    jugando.</li>
+    <li>Al terminar una partida, para duplicar las monedas ganadas.</li>
+    <li>Cuando se agota un potenciador, para conseguir uno gratis.</li>
+    <li>Desde la hoja "Tus monedas" en la pantalla principal, para conseguir
+    monedas adicionales en cualquier momento.</li>
+  </ul>
+  <p>
+    Estos anuncios se sirven a través del SDK <strong>Google Mobile Ads
+    (AdMob)</strong>, uno de los proveedores externos integrados en la app con
+    tratamiento de datos. Para mostrar anuncios, AdMob puede recoger
+    identificadores de publicidad y del dispositivo, dirección IP aproximada y
+    otra información técnica relacionada con la publicidad, según sus propias
+    políticas. LexiDrop no controla ni recibe esos datos: los gestiona Google.
+  </p>
+  <p>
+    Puedes consultar cómo Google trata esta información en su
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de privacidad de Google</a>
+    y en su
+    <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer">información sobre AdMob y privacidad</a>.
+    En muchos dispositivos y regiones también puedes gestionar o limitar la
+    publicidad personalizada desde los ajustes de anuncios de tu cuenta de Google
+    o de tu sistema operativo.
+  </p>
+
+  <h2>3 bis. Analítica de uso e informes de errores</h2>
+  <p>
+    LexiDrop usa <strong>Google Analytics for Firebase</strong> únicamente para
+    conocer de forma agregada cuántas personas usan la app (usuarios activos
+    diarios, semanales y mensuales), cuántas sesiones se inician y la
+    interacción básica con la app. Para ello Firebase genera un identificador
+    de instalación de la app y recoge datos técnicos del dispositivo (modelo,
+    versión del sistema, idioma, país aproximado). <strong>No se vinculan a tu
+    identidad</strong>, no se usan para rastrearte entre apps ni para
+    publicidad, y LexiDrop no envía nombre, correo ni ningún dato personal.
+    Más información en la
+    <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">política de privacidad de Firebase</a>.
+  </p>
+  <p>
+    <strong>Consentimiento.</strong> Si vives en el Espacio Económico Europeo o
+    el Reino Unido, al abrir la app se muestra un aviso de consentimiento
+    (Google User Messaging Platform) en el que eliges si aceptas el uso de
+    datos para anuncios y analítica. Mientras no lo aceptes, la analítica de
+    uso no se activa y no se piden anuncios. Puedes cambiar tu decisión en
+    cualquier momento desde Ajustes &gt; Opciones de privacidad.
+  </p>
+  <p>
+    Si la app falla, se envía un informe técnico anónimo (tipo de error y
+    estado del dispositivo, sin datos personales) a Sentry para poder corregirlo.
+  </p>
+
+  <h2>4. Tus derechos y control sobre tus datos</h2>
+  <p>
+    Como LexiDrop no guarda datos en ningún servidor, el control sobre tu
+    información está siempre en tu propio dispositivo:
+  </p>
+  <ul>
+    <li><strong>Borrar tu progreso:</strong> usa la opción "Reiniciar progreso" en
+    la pantalla de Ajustes de la app, o simplemente desinstala la aplicación.</li>
+    <li><strong>Analítica:</strong> puedes restablecer o desactivar el
+    identificador de publicidad/analítica desde los ajustes de privacidad de tu
+    sistema operativo; los datos de Firebase son anónimos y no están vinculados
+    a tu identidad.</li>
+    <li><strong>Datos relacionados con anuncios:</strong> para solicitudes sobre
+    los datos que procesa Google AdMob, consulta los canales de privacidad de
+    Google enlazados arriba.</li>
+  </ul>
+
+  <h2>5. Menores de edad</h2>
+  <p>
+    LexiDrop es una app educativa de uso general para aprender vocabulario y no
+    está dirigida específicamente a niños. No forma parte del programa "Designed
+    for Families" de Google Play. La app cumple con las políticas de contenido y
+    de anuncios de Google Play aplicables a aplicaciones de audiencia general.
+  </p>
+
+  <h2>6. Cambios en esta política</h2>
+  <p>
+    Si esta política cambia (por ejemplo, al añadir un nuevo servicio de
+    terceros), se actualizará esta misma página indicando la nueva fecha de
+    última actualización.
+  </p>
+
+  <h2>7. Contacto</h2>
+  <p>
+    Si tienes preguntas sobre esta política de privacidad o sobre el tratamiento
+    de datos en LexiDrop, puedes escribir a:
+  </p>
+  <div class="card">
+    <span class="label">Contacto</span>
+    <p><a href="mailto:unpublishedtech@gmail.com">unpublishedtech@gmail.com</a></p>
+  </div>
+
+  <footer>
+    LexiDrop — desarrollador independiente. Esta política aplica a la app
+    LexiDrop (<code>com.danielcardonaisern.lexidrop</code>) distribuida en Google
+    Play.
+  </footer>
+</div>
+
+</body>
+</html>
