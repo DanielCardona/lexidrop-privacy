@@ -188,10 +188,11 @@
     nombre, correo, ni ningún dato personal por sí misma. Tu progreso (racha,
     monedas, potenciadores, palabras aprendidas) se guarda únicamente en tu
     dispositivo. El único tratamiento de datos que ocurre es el que realizan
-    <strong>Google AdMob</strong> (anuncios con recompensa opcionales) y
+    <strong>Google AdMob</strong> (anuncios: banners en algunas pantallas y
+    anuncios con recompensa opcionales) y
     <strong>Google Analytics for Firebase</strong> (estadísticas anónimas de uso,
-    como cuántas personas usan la app cada día), además de los informes de
-    errores técnicos.</p>
+    como cuántas personas usan la app cada día, y eventos anónimos sobre los
+    anuncios), además de los informes de errores técnicos.</p>
   </div>
 
   <h2>1. Qué datos recoge la app</h2>
@@ -220,19 +221,34 @@
     <li>Progreso de juego: racha, monedas, potenciadores y estado de aprendizaje de
     cada palabra.</li>
     <li>Preferencias: idioma de la interfaz, tema visual y ajustes de sonido.</li>
+    <li>Límites de anuncios: cuántos anuncios opcionales has visto hoy y hasta
+    cuándo está abierto un tema que desbloqueaste temporalmente con un anuncio.</li>
   </ul>
   <p>
     Si desinstalas la app, o usas la opción "Reiniciar progreso" dentro de Ajustes,
     esos datos se borran permanentemente del dispositivo.
   </p>
 
-  <h2>3. Anuncios con recompensa (Google AdMob)</h2>
+  <h2>3. Anuncios (Google AdMob)</h2>
   <p>
-    LexiDrop es gratuita. Para mantenerla así, ofrece anuncios con recompensa
-    <strong>siempre opcionales</strong>: nunca se muestran de forma forzosa ni
-    interrumpen el juego sin que tú lo pidas. Puedes jugar a LexiDrop por completo
-    sin ver ningún anuncio. Los cuatro momentos en los que la app te ofrece ver un
-    anuncio a cambio de una recompensa son:
+    LexiDrop es gratuita. Para mantenerla así, muestra dos tipos de anuncios a
+    través de Google AdMob:
+  </p>
+  <ul>
+    <li><strong>Banners</strong> (un anuncio pequeño en la parte inferior) en
+    algunas pantallas secundarias: Ajustes y Diccionario. Los banners
+    <strong>no son opcionales</strong> en esas pantallas, pero nunca aparecen
+    durante una partida, en la pantalla de resultado, en la pantalla principal,
+    en la bienvenida ni en las ventanas en las que tienes que decidir algo.</li>
+    <li><strong>Anuncios con recompensa</strong>, que son <strong>siempre
+    opcionales</strong>: solo se muestran si tú los pides y nunca interrumpen el
+    juego por su cuenta. Puedes jugar a LexiDrop por completo sin ver ninguno.</li>
+  </ul>
+  <p>
+    LexiDrop no muestra anuncios a pantalla completa que aparezcan por sorpresa
+    (intersticiales). Si no aceptas el consentimiento donde se te pide (ver
+    más abajo), no se muestran anuncios de ningún tipo. Los momentos en los que
+    la app te ofrece ver un anuncio con recompensa son:
   </p>
   <ul>
     <li>Cuando la pila de fichas se llena durante una partida, para poder seguir
@@ -240,10 +256,13 @@
     <li>Al terminar una partida, para duplicar las monedas ganadas.</li>
     <li>Cuando se agota un potenciador, para conseguir uno gratis.</li>
     <li>Desde la hoja "Tus monedas" en la pantalla principal, para conseguir
-    monedas adicionales en cualquier momento.</li>
+    monedas adicionales (con un máximo de anuncios al día).</li>
+    <li>Al tocar un tema bloqueado, como alternativa para abrirlo durante 3 días
+    (máximo 2 temas al día). La forma normal de abrirlo, superar el nivel 1 del
+    tema anterior, es gratuita y siempre está disponible.</li>
   </ul>
   <p>
-    Estos anuncios se sirven a través del SDK <strong>Google Mobile Ads
+    Los anuncios se sirven a través del SDK <strong>Google Mobile Ads
     (AdMob)</strong>, uno de los proveedores externos integrados en la app con
     tratamiento de datos. Para mostrar anuncios, AdMob puede recoger
     identificadores de publicidad y del dispositivo, dirección IP aproximada y
@@ -270,7 +289,14 @@
     versión del sistema, idioma, país aproximado). <strong>No se vinculan a tu
     identidad</strong>, no se usan para rastrearte entre apps ni para
     publicidad, y LexiDrop no envía nombre, correo ni ningún dato personal.
-    Más información en la
+    Además de esas estadísticas, la app registra unos pocos eventos
+    <strong>anónimos</strong> sobre los anuncios y los temas abiertos con
+    anuncio: si se ofreció un anuncio, si se aceptó, si se completó o falló (con
+    un código técnico de error de AdMob), si un banner se mostró o no pudo
+    cargarse (y en qué pantalla) y si un tema se abrió temporalmente. Solo
+    indican el momento de la app (por ejemplo, "duplicar monedas") o un código de
+    error; no contienen datos personales ni lo que aprendes. Más información en
+    la
     <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">política de privacidad de Firebase</a>.
   </p>
   <p>
@@ -278,7 +304,8 @@
     el Reino Unido, al abrir la app se muestra un aviso de consentimiento
     (Google User Messaging Platform) en el que eliges si aceptas el uso de
     datos para anuncios y analítica. Mientras no lo aceptes, la analítica de
-    uso no se activa y no se piden anuncios. Puedes cambiar tu decisión en
+    uso (incluidos los eventos de anuncios) no se activa y no se piden ni se
+    muestran anuncios, tampoco banners. Puedes cambiar tu decisión en
     cualquier momento desde Ajustes &gt; Opciones de privacidad.
   </p>
   <p>
